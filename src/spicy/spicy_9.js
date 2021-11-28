@@ -123,7 +123,13 @@ export const everyEven = (arr, test) => {
  *    someEven([0, 0, 0, 0, 0], x => x === 0)  <--  returns true
  */
 export const someEven = (arr, test) => {
-
+    var x = new Boolean(false);
+    arr.forEach(element => {
+        if (test(element)) {
+            x = true;
+        }
+    });
+    return x;
 };
 
 
