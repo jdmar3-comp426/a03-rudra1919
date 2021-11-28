@@ -57,7 +57,7 @@ export function maxAndMin(numbers) {
             maxi = numbers[x];
         }
     }
-    return {min: mini, max: maxi}
+    return {min: maxi, max: mini}
 }
 
 /**
