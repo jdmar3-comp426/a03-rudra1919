@@ -27,7 +27,11 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-
+   let counter = [];
+   array.forEach(element => {
+      let placeholder = {type: typeof element, value: element}
+      counter.push(placeholder);
+   });
 }
 
 /**
