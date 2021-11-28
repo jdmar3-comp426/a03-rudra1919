@@ -65,8 +65,7 @@ export function getStatistics(array) {
         placeholder = placeholder * placeholder;
         arr.push(placeholder);
     });
-    let avg2 = getSum(arr) / arr.length;
-    let variance = Math.sqrt(avg2);
+    let variance = getSum(arr) / arr.length;
     
     return {
         length: array.length,
