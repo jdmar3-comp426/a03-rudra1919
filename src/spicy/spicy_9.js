@@ -215,5 +215,16 @@ export const anEvenIsOdd = (arr) => {
  *   pass the test. You must use the filter function.
  */
 export const hasExactly = (arr, test, n) => {
-
+    let count = 0;
+    arr.forEach(element => {
+        if (test(element)) {
+            count++;
+        }
+    });
+    if (count == n) {
+        return true;
+    }
+    else {
+        return false;
+    }
 };
