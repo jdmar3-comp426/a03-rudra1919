@@ -28,7 +28,7 @@ export function sumToString(a, b) {
 export function getIncreasingArray(startNumber, endNumber) {
     let diff;
     diff = startNumber - endNumber + 1
-    let arr = Array(diff);
+    let arr = new Array(10);
     for (let i = 0; i < diff; i++) {
         arr[i] = startNumber;
         startNumber++;
