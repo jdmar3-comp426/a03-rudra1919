@@ -73,6 +73,7 @@ export function removeKey(object, key) {
  */
 export function removeKeyNonDestructive(object, key) {
    let object2 =  {...object};
+   let a;
    delete object2[key];
    return object2;
 }
