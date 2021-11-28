@@ -12,7 +12,7 @@ export function getSum(array) {
     const reducer = (previousValue, currentValue) => previousValue + currentValue;
 
     let a = array.reduce(reducer);
-    return {a};
+    return a;
 }
 
 
