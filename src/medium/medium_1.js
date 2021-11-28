@@ -58,6 +58,15 @@ export function getMedian(array) {
  */
 export function getStatistics(array) {
     let avg = getSum(array) / array.length;
+    let arr = [];
+    let placeholder;
+    array.forEach(element => {
+        placeholder = Math.abs(element - avg);
+        placeholder = placeholder * placeholder;
+        arr.push(placeholder);
+    });
+    let avg2 = getSum(arr) / arr.length;
+    let variance = Math.sqrt(avg2);
     
     return {
         length: array.length,
@@ -65,7 +74,9 @@ export function getStatistics(array) {
         mean: avg,
         median: getMedian(array),
         min: Math.min(...array),
-        max: Math.max(...array)
+        max: Math.max(...array),
+        variance: variance,
+        standard_deviation: Math.sqrt(variance)
     };
 }
 
