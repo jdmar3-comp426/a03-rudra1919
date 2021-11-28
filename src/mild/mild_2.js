@@ -32,6 +32,7 @@ export function identifyArray(array) {
       let placeholder = {type: typeof element, value: element}
       counter.push(placeholder);
    });
+   return counter;
 }
 
 /**
