@@ -166,8 +166,8 @@ export const filter = (arr, test) => {
         }
     });
     return {
-        fail: fail,
-        pass: pass
+        pass: pass,
+        fail: fail
     };
 };
 
