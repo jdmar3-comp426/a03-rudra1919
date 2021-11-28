@@ -66,7 +66,7 @@ export function getStatistics(array) {
         placeholder = placeholder * placeholder;
         arr.push(placeholder);
     });
-    let variance = getSum(arr) / arr.length;
+   // let variance = getSum(arr) / arr.length;
     
     return {
         length: array.length,
@@ -75,7 +75,7 @@ export function getStatistics(array) {
         median: getMedian(array),
         min: Math.min(...array),
         max: Math.max(...array),
-        variance: variance,
+        variance: variance(array, avg),
         standard_deviation: Math.sqrt(variance)
     };
 }
