@@ -33,6 +33,7 @@ export function getIncreasingArray(startNumber, endNumber) {
         arr[i] = startNumber;
         startNumber++;
     }
+    return arr;
 }
 
 /**
