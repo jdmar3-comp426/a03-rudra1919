@@ -24,7 +24,7 @@ export const allCarStats = {
     avgMpg: {city: mpg_data.reduce(
         (previousValue, currentValue)=> previousValue + currentValue.city_mpg, x) / mpg_data.length,
         highway: mpg_data.reduce(
-            (previousValue, currentValue) => previousValue + currentValue.city_mpg, x) / mpg_data.length
+            (previousValue, currentValue) => previousValue + currentValue.highway_mpg, x) / mpg_data.length
     },
     allYearStats: getStatistics(mpg_data.map(function(car) {return car["year"]; })),
     ratioHybrids: (mpg_data.filter(car => car.hybrid == true).length / mpg_data.length)
