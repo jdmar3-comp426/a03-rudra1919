@@ -66,7 +66,7 @@ export const tenTimes = multiplyBy(10);
  */
 export const tenTimesFifty = () => {
     let temp = multiplyBy(50);
-    let temp2 = tenTimes(temp);
+    let temp2 = 10 * temp;
     return temp2;
 };
 
