@@ -30,7 +30,7 @@ export const repeat = (fn, n, ...params) => {
 export const repeatDemo = () => {
     let a = [];
     a.push("Hello, world!")
-    console.log(repeat(function(a){return a}, 10, "Hello, world!"))
+    repeat(console.log, 10, "Hello, world!");
 };
 
 
@@ -47,7 +47,7 @@ export const repeatDemo = () => {
  *   product of num1 and num2.
  */
 export const multiplyBy = (num1) => {
-
+    
 };
 
 
