@@ -26,7 +26,15 @@ export function getSum(array) {
  * console.log(getMedian(array)); // 4.5
  */
 export function getMedian(array) {
-
+    array = array.sort(function (a,b) { return a - b; });
+    let odd = array.length % 2;
+    let half = Math.floor(array.length / 2)
+    if (odd == 1) {
+        return array[half -1] + array[half] / 2;
+    }
+    else {
+        return array[half];
+    }
 }
 
 /**
