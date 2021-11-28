@@ -178,7 +178,15 @@ export const filter = (arr, test) => {
  *   odd numbers. Use the "everyEven" function in this function.
  */
 export const allEvensAreOdd = (arr) => {
-
+    var x = new Boolean(true);
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 == 0) {
+            if (arr[i] % 2 != 0) {
+                x = false;
+            }
+        }
+    }
+    return x;
 };
 
 
