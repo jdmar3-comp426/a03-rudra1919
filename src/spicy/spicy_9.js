@@ -196,7 +196,15 @@ export const allEvensAreOdd = (arr) => {
  *   array is an odd number. Use the "someEven" function in this function.
  */
 export const anEvenIsOdd = (arr) => {
-
+    var x = new Boolean(false);
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 == 0) {
+            if (arr[i] % 2 != 0) {
+                x = true;
+            }
+        }
+    }
+    return x;
 };
 
 
