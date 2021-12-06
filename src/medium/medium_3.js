@@ -18,7 +18,19 @@ queries.
  *
  */
 export function searchHighPower(car_data, minHorsepower, minTorque) {
-
+    let arr = [];
+    let i = 0;
+    car_data.forEach(element => {
+        if (element.reduce(
+            (previousValue, currentValue)=> previousValue + currentValue.horsepower, i) / car_data.length >= 
+            minHorsepower && element.reduce(
+                (previousValue, currentValue)=> previousValue + currentValue.horsepower, i) / car_data.length >= 
+                minTorque) {
+                    arr.push(element);
+            }
+            i++;
+    });
+    return arr;
 }
 
 
